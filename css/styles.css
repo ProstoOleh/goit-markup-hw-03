@@ -209,7 +209,7 @@ height: auto;
 
 .section-features {
     width: 100%;
-    padding-top: 120px;
+    padding: 120px 0;
 }
 
 .features-list {
@@ -242,8 +242,7 @@ height: auto;
 
 .section-products {
     width: 100%;
-    padding-top: 130px;
-    padding-bottom: 110px;
+    padding-bottom: 120px;
 }
 
 .products-title {
@@ -294,14 +293,14 @@ height: auto;
 
 .team-item {
     width: calc( (100% - 3 * 24px) / 4);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    border-radius: 0px 0px 4px 4px;
 }
 
 /* Picture description (Cards) */
 
 .cards {
     padding: 32px 16px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    border-radius: 0px 0px 4px 4px;
     background: #FFFFFF;
 }
 
@@ -339,6 +338,8 @@ height: auto;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+    display: inline-block;
+    margin-bottom: 16px;
     text-transform: uppercase;
     color: var(--logo-first-color);
 }
@@ -360,7 +361,6 @@ height: auto;
     line-height: 1.50;
     letter-spacing: 0.02em;
     max-width: 264px;
-    margin-top: 16px;
     color: var(--fourth-text-color);
 }
 
