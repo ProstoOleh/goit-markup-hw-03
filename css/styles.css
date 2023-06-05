@@ -13,6 +13,7 @@
     --bttn-background-second-color: #F4F4FD;
     --bttn-first-color: #4D5AE5;
     --bttn-second-color: #FFFFFF;
+    --border-bttn-color: #E7E9FC;
 }
 
 body {
@@ -52,9 +53,9 @@ ul {
 }
 
 img {
-display: block;
-max-width: 100%;
-height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 /*----- Home page -----*/
@@ -210,6 +211,19 @@ height: auto;
 .section-features {
     width: 100%;
     padding: 120px 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .features-list {
@@ -368,8 +382,16 @@ height: auto;
 
 /*----- Portfolio Page -----*/
 
-.portfolio {
+.section-portfolio {
+    padding: 96px 0 120px 0;
+}
 
+.portfolio-filters-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 72px;
 }
 
 /* Buttons filters */
@@ -381,6 +403,8 @@ height: auto;
     letter-spacing: 0.04em;
     cursor: pointer;
     padding: 12px 24px;
+    border: 1px solid var(--border-bttn-color);
+    border-radius: 4px;
     color: var(--bttn-first-color);
     background: var(--bttn-background-second-color);
 }
@@ -388,15 +412,37 @@ height: auto;
 .portfolio-button:is(:hover, :focus) {
     color: #FFFFFF;
     background-color: #404BBF;
+    border: 1px solid transparent;
 }
 
 /* Examples of projects */
+
+.portfolio-projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+
+.portfolio-projects-item {
+    width: calc((100% - 2 * 24px) / 3);
+}
+
+.portfolio-cards {
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
+}
+
+
 
 .portfolio-projects-subtitle {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.20;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
     color: var(--first-text-color);
 }
 
